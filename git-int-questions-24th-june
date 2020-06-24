@@ -1,0 +1,212 @@
+6. What language is used in Git?
+
+Instead of just telling the name of the language, you need to tell the reason for using it as well. I will suggest you to answer this by saying:
+
+Git uses ‘C’ language. GIT is fast, and ‘C’ language makes this possible by reducing the overhead of run times associated with high-level languages.
+7. Mention the various Git repository hosting functions.
+
+    Github
+    Gitlab
+    Bitbucket
+    SourceForge
+    GitEnterprise
+
+8. What is a commit message?
+
+The command that is used to write a commit message is “git commit -a”.
+Now explain about -a flag by saying -a on the command line instructs git to commit the new content of all tracked files that have been modified. Also, mention you can use “git add <file>” before git commit -a if new files need to be committed for the first time.
+9. How can you fix a broken commit?
+
+In order to fix any broken commit, use the command “git commit --amend”. When you run this command, you can fix the broken commit message in the editor.
+10. What is a repository in Git?
+
+Repository in Git is a place where Git stores all the files. Git can store the files either on the local repository or on the remote repository.
+11. How can you create a repository in Git?
+
+This is probably the most frequently asked question and the answer to this is really simple.
+
+To create a repository, create a directory for the project if it does not exist, then run the command “git init”. By running this command .git directory will be created in the project directory.
+12. What is ‘bare repository’ in Git?
+
+A “bare” repository in Git contains information about the version control and no working files (no tree) and it doesn’t contain the special .git sub-directory. Instead, it contains all the contents of the .git sub-directory directly in the main directory itself, whereas the working directory consists of :
+
+    A .git subdirectory with all the Git related revision history of your repository.
+    A working tree, or checked out copies of your project files.
+
+13. What is a ‘conflict’ in git?
+
+Git can handle on its own most merges by using its automatic merging features. There arises a conflict when two separate branches have made edits to the same line in a file, or when a file has been deleted in one branch but edited in the other. Conflicts are most likely to happen when working in a team environment.
+14. How is git instaweb used?
+
+‘git instaweb’ is used to automatically direct a web browser and run a webserver with an interface into your local repository.
+15. What is git is-tree?
+
+‘git is-tree’ represents a tree object including the mode and the name of each item and the SHA-1 value of the blob or the tree.
+16. Name a few Git commands and explain their usage.
+
+          Below are some basic Git commands:
+
+
+
+Command	Function
+git rm [file]	deletes the file from your working directory and stages the deletion.
+git log 	list the version history for the current branch.
+
+git show [commit]  
+	shows the metadata and content changes of the specified commit.
+
+git tag [commitID] 
+	used to give tags to the specified commit.
+
+git checkout [branch name]
+
+git checkout -b [branch name]
+
+
+Intermediate level Questions
+17. How to resolve a conflict in Git?
+
+The following steps will resolve conflict in Git-
+
+    Identify the files that have caused the conflict.
+
+    Make the necessary changes in the files so that conflict does not arise again.
+
+    Add these files by the command git add.
+
+    Finally to commit the changed file using the command git commit
+
+18. In Git how do you revert a commit that has already been pushed and made public?
+
+There can be two approaches to tackle this question and make sure that you include both because any of the below options can be used depending on the situation:
+
+    Remove or fix the bad file in a new commit and then push it to the remote repository. This is the most obvious way to fix an error. Once you have made necessary changes to the file, then commit it to the remote repository using the command: git commit -m “commit message”
+
+    Also, you can create a new commit that undoes all changes that were made in the bad commit. To do this use the command
+
+git revert <name of bad commit>
+ 19. What is SubGit?
+
+SubGit is a tool for SVN to Git migration. It can create a writable Git mirror of a local or remote Subversion repository and use both Subversion and Git as long as you like.
+
+Now you can also include some advantages like you can do a fast one-time import from Subversion to Git or use SubGit within Atlassian Bitbucket Server. We can use SubGit to create a bi-directional Git-SVN mirror of an existing Subversion repository. You can push to Git or commit to Subversion as per your convenience. Synchronization will be done by SubGit. 
+20. What is the difference between git pull and git fetch?
+
+Git pull command pulls new changes or commits from a particular branch from your central repository and updates your target branch in your local repository.
+
+Git fetch is also used for the same purpose but it works in a slightly different way. When you perform a git fetch, it pulls all new commits from the desired branch and stores it in a new branch in your local repository. If you want to reflect these changes in your target branch, git fetch must be followed with a git merge. Your target branch will only be updated after merging the target branch and fetched branch. Just to make it easy for you, remember the equation below:
+
+Git pull = git fetch + git merge 
+21. What is ‘staging area’ or ‘index’ in Git?
+
+That before completing the commits, it can be formatted and reviewed in an intermediate area known as ‘Staging Area’ or ‘Index’. From the diagram it is evident that every change is first verified in the staging area I have termed it as “stage file” and then that change is committed to the repository.
+
+22. What work is restored when the deleted branch is recovered?
+
+The files which were stashed and saved in the stash index list will be recovered back. Any untracked files will be lost. Also, it is a good idea to always stage and commit your work or stash them.
+If you want to fetch the log references of a particular branch or tag then run the command – “git reflog <ref_name>”.
+23. What is git stash?
+
+Often, when you’ve been working on part of your project, things are in a messy state and you want to switch branches for some time to work on something else. The problem is, you don’t want to do a commit of half-done work just so you can get back to this point later. The answer to this issue is Git stash.
+
+Stashing takes your working directory that is, your modified tracked files and staged changes and saves it on a stack of unfinished changes that you can reapply at any time.
+24. What is the function of ‘git stash apply’?
+
+If you want to continue working where you had left your work then ‘git stash apply‘ command is used to bring back the saved changes onto your current working directory.
+25. What is the difference between the ‘git diff ’and ‘git status’?
+
+‘git diff ’ depicts the changes between commits, commit and working tree, etc. whereas ‘git status’ shows you the difference between the working directory and the index, it is helpful in understanding a git more comprehensively. ‘git diff’ is similar to ‘git status’, the only difference is that it shows the differences between various commits and also between the working directory and index. 
+26. What is the difference between ‘git remote’ and ‘git clone’?
+
+‘git remote add’ creates an entry in your git config that specifies a name for a particular URL whereas ‘git clone’ creates a new git repository by copying an existing one located at the URL
+27. What is git stash drop?
+
+Git ‘stash drop’ command is used to remove the stashed item. It will remove the last added stash item by default, and it can also remove a specific item if you include it as an argument.
+
+Now give an example.
+
+If you want to remove a particular stash item from the list of stashed items you can use the below commands:
+
+git stash list: It will display the list of stashed items like:
+stash@{0}: WIP on master: 049d078 added the index file
+stash@{1}: WIP on master: c264051 Revert “added file_size”
+stash@{2}: WIP on master: 21d80a5 added number to log
+
+If you want to remove an item named stash@{0} use command git stash drop stash@{0}.
+28. How do you find a list of files that have changed in a particular commit?
+
+For this answer instead of just telling the command, explain what exactly this command will do.
+
+To get a list file that has changed in a particular commit use the below command:
+
+git diff-tree -r {hash}
+
+Given the commit hash, this will list all the files that were changed or added in that commit. The -r flag makes the command list individual files, rather than collapsing them into root directory names only.
+
+You can also include the below-mentioned point, although it is totally optional but will help in impressing the interviewer.
+
+The output will also include some extra information, which can be easily suppressed by including two flags:
+
+git diff-tree --no-commit-id --name-only -r {hash}
+
+Here –no-commit-id will suppress the commit hashes from appearing in the output, and –name-only will only print the file names, instead of their paths.
+29. What is the function of ‘git config’?
+
+Git uses your username to associate commits with an identity. The git config command can be used to change your Git configuration, including your username.
+
+Now explain with an example.
+
+Suppose you want to give a username and email id to associate a commit with an identity so that you can know who has made a particular commit. For that I will use:
+
+git config –global user.name “Your Name”: This command will add a username.
+git config –global user.email “Your E-mail Address”: This command will add an email id. 
+30. What does a commit object contain?
+
+Commit object contains the following components, you should mention all the three points presented below:
+
+    A set of files, representing the state of a project at a given point of time
+    Reference to parent commit objects
+    An SHA-1 name, a 40 character string that uniquely identifies the commit object 
+
+31. Describe the branching strategies you have used.
+
+    Feature branching – A feature branch model keeps all of the changes for a particular feature inside of a branch. When the feature is fully tested and validated by automated tests, the branch is then merged into master.
+
+    Task branching – In this model, each task is implemented on its own branch with the task key included in the branch name. It is easy to see which code implements which task, just look for the task key in the branch name.
+
+    Release branching – Once the develop branch has acquired enough features for a release, you can clone that branch to form a Release branch. Creating this branch starts the next release cycle, so no new features can be added after this point, only bug fixes, documentation generation, and other release-oriented tasks should go in this branch. Once it is ready to ship, the release gets merged into master and tagged with a version number. In addition, it should be merged back into the develop branch, which may have progressed since the release was initiated.
+
+    In the end tell them that branching strategies vary from one organization to another so I know basic branching operations like delete, merge, checking out a branch, etc.
+
+32. Explain the advantages of forking workflow
+
+    There is a fundamental difference between the forking workflow and other popular git workflows. Rather than using a single server-side to act as the “central” codebase, it gives every developer their own server-side repository. The Forking Workflow is commonly seen in public open-source projects.
+
+    A crucial advantage of the Forking Workflow is that contributions can be integrated without even needing everybody to push to a single central repository that leads to clean project history. Developers can push to their own server-side repositories, but only the project maintainer can push to the official repository.
+
+    If developers are ready to publish a local commit, then they push the commit to their own public repository and not the official one. After this, they go for a pull request with the main repository that lets the project maintainer know an update is ready to be integrated.
+
+33. How will you know in Git if a branch has already been merged into master?
+
+The answer is pretty direct.
+
+To know if a branch has been merged into master or not you can use the below commands:
+
+git branch --merged – It lists the branches that have been merged into the current branch.
+git branch --no-merged – It lists the branches that have not been merged.
+34. Why is it desirable to create an additional commit rather than amending an existing commit?
+
+There are a couple of reasons for this –
+
+    The amend operation destroys the state that was previously saved in a commit. If there is just the commit message being changed then that’s not a problem.  But if the contents are being amended then chances of eliminating something important remains more.
+    Abusing “git commit- amend” can result in the growth of a small commit and acquire unrelated changes.
+
+35. What does ‘hooks’ comprise of in Git?
+
+This directory consists of shell scripts that are activated if you run the corresponding Git commands.  For example, git will try to execute the post-commit script after you have run a commit. 
+36. In Git, how would you return a commit that has just been pushed and made open?
+
+One or more commits can be reverted through the use of git revert. This command, in a true sense, creates a new commit with patches that cancel out the changes introduced in specific commits. If in case the commit that needs to be reverted has already been published or changing the repository history is not an option then in such cases, git revert can be used to revert commits. If you run the following command then it will revert the last two commits:
+
+git revert HEAD~2..HEAD
+
